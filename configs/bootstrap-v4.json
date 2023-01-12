@@ -1,21 +1,143 @@
 {
-  "index_name": "bootstrap-v4",
+  "index_name": "bootstrap-v4-ru",
   "start_urls": [
-    "https://getbootstrap.com/docs/4.0/"
+    {
+      "url": "https://bootstrap-4.ru/docs/3.4/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["3.4"]
+      },
+      "selectors_key": "v3"
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/4.0/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["4.0"]
+      },
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/4.1/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["4.1"]
+      },
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/4.4/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["4.4"]
+      },
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/4.5/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["4.5"]
+      },
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/4.6/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["4.6"]
+      },
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/5.0/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["5.0"]
+      },
+      "selectors_key": "v5"
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/5.1/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["5.1"]
+      },
+      "selectors_key": "v5"
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/5.2/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["5.2"]
+      },
+      "selectors_key": "v5"
+    },
+    {
+      "url": "https://bootstrap-4.ru/docs/5.3/",
+      "extra_attributes": {
+        "language": ["ru"],
+        "version": ["5.3"]
+      },
+      "selectors_key": "v5"
+    },
+    "https://bootstrap-4.ru/docs/"
+  ],
+  "sitemap_urls": [
+    "https://bootstrap-4.ru/sitemap.xml"
   ],
   "stop_urls": [
-    "/examples/.+"
+    "/examples/.+",
+    "/docs/3",
+    "/docs/2",
+    "/docs/1",
+    "bootstrap-4.ru/docs/versions/"
   ],
   "selectors": {
-    "lvl0": ".bd-toc-item.active > a",
-    "lvl1": ".bd-content h1",
-    "lvl2": ".bd-content h2",
-    "lvl3": ".bd-content h3",
-    "text": ".bd-content p, .bd-content li, .bd-example"
+    "default": {
+      "lvl0": {
+        "selector": ".bd-toc-item.active > a",
+        "global": true,
+        "default_value": "Документация"
+      },
+      "lvl1": "main h1",
+      "lvl2": "main h2",
+      "lvl3": "main h3",
+      "lvl4": "main h4, main td:first-child",
+      "lvl5": "main h5",
+      "text": "main p, main li, main td:last-child"
+    },
+    "v3": {
+      "lvl0": {
+        "selector": ".bs-docs-header h1",
+        "global": true,
+        "default_value": "Документация"
+      },
+      "lvl1": ".bs-docs-section h1",
+      "lvl2": ".bs-docs-section h2",
+      "lvl3": ".bs-docs-section h3",
+      "lvl4": ".bs-docs-section h4",
+      "lvl5": ".bs-docs-section h5",
+      "text": ".bs-docs-section p, .bs-docs-section li, .bs-docs-header p"
+    },
+    "v5": {
+      "lvl0": {
+        "selector": ".bd-sidebar .active.my-1 > a",
+        "global": true,
+        "default_value": "Документация"
+      },
+      "lvl1": ".bd-layout h1",
+      "lvl2": "main h2",
+      "lvl3": "main h3",
+      "lvl4": "main h4, main td:first-child",
+      "lvl5": "main h5",
+      "text": "main p, main li, main td:last-child"
+    }
   },
-  "min_indexed_level": 1,
-  "conversation_id": [
-    "423628659"
+  "selectors_exclude": [
+    ".bd-example"
   ],
-  "nb_hits": 3039
+  "custom_settings": {
+    "attributesForFaceting": [
+      "version",
+      "language"
+    ]
+  },
+  "conversation_id": ["786529004"],
+  "nb_hits": 23684
 }
